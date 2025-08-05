@@ -1,13 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CreateToken.fun</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CreateTokens App</title>
+    <style>
+        body { background: #111; color: white; font-family: Arial, sans-serif; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1 { color: #0ff; }
+        button { padding: 10px 20px; margin-top: 10px; background: purple; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        input { padding: 10px; width: 100%; margin: 10px 0; border-radius: 5px; border: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 CreateTokens on Solana</h1>
+        <p>Connect your Phantom Wallet and launch your SPL token on Solana!</p>
+        <input type="text" placeholder="Token Name" id="tokenName" />
+        <input type="text" placeholder="Token Symbol" id="tokenSymbol" />
+        <input type="number" placeholder="Supply" id="tokenSupply" />
+        <button onclick="createToken()">Create Token</button>
+        <p style="margin-top: 30px;">💡 Wallet connect and blockchain features coming in the next update.</p>
+    </div>
+
+    <script>
+        function createToken() {
+            const name = document.getElementById('tokenName').value;
+            const symbol = document.getElementById('tokenSymbol').value;
+            const supply = document.getElementById('tokenSupply').value;
+            alert(`Simulated: Creating token "${name}" (${symbol}) with supply ${supply}`);
+        }
+    </script>
+</body>
 </html>
